@@ -20,9 +20,9 @@
     <rect x="300" y="160" width="300" height="90" rx="10" fill="#5A9BD5" />
     <text x="450" y="185" text-anchor="middle" fill="white" font-family="Arial" font-size="18" font-weight="bold">Ryu
         SDN Controller</text>
-    <text x="450" y="210" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Flow Management • Policy
+    <text x="450" y="210" text-anchor="middle" fill="white" font-family="Arial" font-size="11.5">Flow Management • Policy
         Control • QoS • Network Slicing</text>
-    <text x="450" y="230" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Monitoring • Topology
+    <text x="450" y="230" text-anchor="middle" fill="white" font-family="Arial" font-size="11.5">Monitoring • Topology
         Discovery • Traffic Engineering</text>
 
     <!-- Key Performance Indicators for Faculty -->
@@ -117,56 +117,56 @@
             <!-- Virtual Network Labels -->
             <!-- VXLAN 10 - Student Network -->
             <rect x="50" y="505" width="120" height="25" rx="5" fill="#4CAF50" />
-            <text x="110" y="522" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="110" y="522" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">VXLAN 10 - Sinh Viên</text>
 
             <!-- VXLAN 20 - Faculty Network -->
             <rect x="50" y="535" width="120" height="25" rx="5" fill="#F57C00" />
-            <text x="110" y="552" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="110" y="552" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">VXLAN 20 - Giảng Viên</text>
 
             <!-- VXLAN 30 - Research Network -->
             <rect x="50" y="565" width="120" height="25" rx="5" fill="#2196F3" />
-            <text x="110" y="582" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="110" y="582" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">VXLAN 30 - Nghiên Cứu</text>
 
             <!-- End Devices - CNTT Network -->
             <rect x="190" y="505" width="120" height="25" rx="5" fill="#4CAF50" />
-            <text x="250" y="522" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="250" y="522" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">SV Khoa CNTT</text>
 
             <rect x="190" y="535" width="120" height="25" rx="5" fill="#F57C00" />
-            <text x="250" y="552" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="250" y="552" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">GV Khoa CNTT</text>
 
             <rect x="190" y="565" width="120" height="25" rx="5" fill="#2196F3" />
-            <text x="250" y="582" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="250" y="582" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">Lab CNTT</text>
 
             <!-- End Devices - Kinh Te Network -->
             <rect x="415" y="505" width="120" height="25" rx="5" fill="#4CAF50" />
-            <text x="475" y="522" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="475" y="522" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">SV Khoa Kinh tế</text>
 
             <rect x="415" y="535" width="120" height="25" rx="5" fill="#F57C00" />
-            <text x="475" y="552" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="475" y="552" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">GV Khoa Kinh tế</text>
 
             <rect x="415" y="565" width="120" height="25" rx="5" fill="#2196F3" />
-            <text x="475" y="582" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="475" y="582" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">Lab Kinh tế</text>
 
             <!-- End Devices - Khoa Hoc Network -->
             <rect x="640" y="505" width="120" height="25" rx="5" fill="#4CAF50" />
-            <text x="700" y="522" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="700" y="522" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">SV Khoa Khoa học</text>
 
             <rect x="640" y="535" width="120" height="25" rx="5" fill="#F57C00" />
-            <text x="700" y="552" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="700" y="552" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">GV Khoa Khoa học</text>
 
             <rect x="640" y="565" width="120" height="25" rx="5" fill="#2196F3" />
-            <text x="700" y="582" text-anchor="middle" fill="white" font-family="Arial" font-size="12"
+            <text x="700" y="582" text-anchor="middle" fill="white" font-family="Arial" font-size="10"
                 font-weight="bold">Lab Khoa học</text>
 
             <!-- Connections to Virtual Networks -->
