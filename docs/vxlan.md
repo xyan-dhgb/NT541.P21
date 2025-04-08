@@ -40,6 +40,7 @@ VXLAN sử dụng mô hình **Overlay Network** với 2 thành phần chính:
 
 3. VTEP bên kia **bóc gói**, trả về gói Ethernet gốc cho VM đích.
 
+> [!NOTE]
 >  VXLAN sử dụng **UDP port 4789**.
 
 ## VXLAN "Decouple" khỏi mạng vật lý như thế nào?
