@@ -1,4 +1,4 @@
- /* Toàn bộ body */
+/* Toàn bộ body */
  body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -41,7 +41,12 @@
     text-align: center;
     margin-bottom: 20px;
     color: #333;
-    font-size: 2rem; /* Base font size */
+    font-size: 1.5rem; /* Base font size */
+  }
+
+  .compulsory-star {
+    color: red;
+    font-weight: bold;
   }
 
   /* Tree Section */
@@ -56,7 +61,7 @@
     text-align: center;
     color: black;
     margin-bottom: 20px;
-    font-size: 1.8rem; /* Base font size */
+    font-size: 1.5rem; /* Base font size */
   }
 
   .tree-section .switch {
@@ -94,12 +99,11 @@
 
   button {
     padding: 10px 20px;
-    background: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: 2px solid #3D90D7;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background 0.3s ease;
   }
 
   button[type="submit"] {
@@ -109,7 +113,8 @@
   }
 
   button:hover {
-    background: #0056b3;
+    background:  #3D90D7;
+    color: white;
     transition-duration: 0.5s;
   }
 
@@ -145,7 +150,7 @@
     }
 
     .tree-section h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -153,4 +158,68 @@
   h4 {
     margin-top: 20px;
     margin-bottom: 10px;
+    font-size: 25.5px; /* Kích thước chữ lớn hơn */
+  }
+
+  .messages {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa nội dung bên trong */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 10px; /* Cách phía trên 10px */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%); /* Đảm bảo căn giữa chính xác */
+    width: 90%; /* Chiếm 90% chiều rộng màn hình */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa */
+    z-index: 1000; /* Đảm bảo thông báo nằm trên các phần tử khác */
+    flex-wrap: wrap; /* Đảm bảo nội dung không tràn ra ngoài */
+  }
+
+  .alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px; /* Kích thước chữ vừa phải */
+    text-align: center; /* Căn giữa nội dung văn bản */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng bóng */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của `.messages` */
+  }
+
+  .alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+
+  .alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+
+  /* Responsive cho màn hình nhỏ */
+  @media (max-width: 768px) {
+    .messages {
+      top: 20px; /* Tăng khoảng cách phía trên */
+      width: 95%; /* Chiếm gần hết chiều rộng màn hình */
+      max-width: 500px; /* Giới hạn chiều rộng tối đa */
+    }
+
+    .alert {
+      font-size: 14px; /* Giảm kích thước chữ trên màn hình nhỏ */
+      padding: 10px; /* Giảm padding */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .messages {
+      top: 15px; /* Điều chỉnh khoảng cách phía trên */
+      width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+      max-width: 400px; /* Giới hạn chiều rộng tối đa */
+    }
+
+    .alert {
+      font-size: 12px; /* Giảm kích thước chữ hơn nữa */
+      padding: 8px; /* Giảm padding */
+    }
   }
