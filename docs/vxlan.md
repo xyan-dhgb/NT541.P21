@@ -135,3 +135,16 @@ Hãy tưởng tượng chúng ta làm việc trong một tòa nhà văn phòng l
 
 - Giúp tăng tính **mở rộng, linh hoạt, di động** cho hệ thống mạng hiện đại.
 
+## Giải đáp thắc mắc
+
+> **VXLAN chính là giao thức đóng gói mạng ảo được sử dụng ở Layer 2 và chạy trên mạng vật lý IP (Layer 3), vậy có nghĩa là chúng sẽ định tuyến với nhau bằng Switch và không cần Router. Đúng hay sai?**
+
+- Về việc "VXLAN = mạng ảo (Layer 2) chạy trên mạng vật lý IP (Layer 3)"
+
+&rarr; Hoàn toàn chính xác về bản chất kỹ thuật.
+
+- VXLAN cho phép tạo mạng LAN ảo (Layer 2) trên nền hạ tầng mạng Layer 3 (IP) bằng cách **đóng gói (encapsulate)** các frame Ethernet vào trong gói UDP/IP.
+
+- Vậy có cần router không?
+
+    - Có: vẫn cần router (hoặc thiết bị hỗ trợ định tuyến IP) trong underlay để định tuyến giữa các nút VXLAN (gọi là VTEP).
