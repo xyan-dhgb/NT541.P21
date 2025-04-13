@@ -11,6 +11,7 @@
 ## Vì sao cần VXLAN?
 
 ### Hạn chế của VLAN truyền thống:
+
 - Mạng Layer 2 mở rộng bị giới hạn về quy mô do số VLAN chỉ có tối đa 4096 ID (12-bit).
 
 - Mạng vật lý khó linh hoạt khi muốn di chuyển VM (virtual machine) giữa các rack, data center, hay cloud khác nhau.
