@@ -19,6 +19,7 @@
 - VLAN bị phụ thuộc chặt vào topology vật lý.
 
 ### VXLAN giải quyết:
+
 - Hỗ trợ tới **16 triệu mạng ảo** với VNI (VXLAN Network Identifier) 24-bit.
 
 - **Decouple Layer 2 khỏi Layer 3**: chạy mạng ảo L2 xuyên suốt qua mạng vật lý L3/IP.
