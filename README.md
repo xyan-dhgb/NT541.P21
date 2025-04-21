@@ -1,6 +1,6 @@
 # Ứng dụng SDN và Network Virtualization trong Trường Đại học Thông minh (Smart Campus)
 
-![Network Topology](./sdn-and-nv-final-draft.png)
+![Network Topology](/asset/image/sdn-and-nv-final-draft.png)
 
 ## Giới thiệu
 
