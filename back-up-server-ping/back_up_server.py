@@ -6,7 +6,7 @@ import logging
 import os
 
 # Initialize project path
-PROJECT_PATH = '/home/giabao/Documents/server-ping'
+PROJECT_PATH = 'ENTER-YOUR-PATH-HERE'  # Replace with your project path
 
 # Initialize logging
 logging.basicConfig(
