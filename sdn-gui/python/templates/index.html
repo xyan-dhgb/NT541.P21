@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Network Topology Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hiển thị thông báo -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+      <div class="messages">
+        {% for category, message in messages %}
+        <div class="alert {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endwith %}
+
+      <!-- Form Section -->
+      <div class="form-section">
+        <h1>Xây dựng mạng ảo</h1>
+        <form method="POST">
+          <h3>Thêm khoa <span class="compulsory-star">*</span></h3>
+          <input name="khoa" placeholder="Tên khoa (CNTT, Kiến Trúc)" value="{{ form_data.khoa or '' }}" /><br />
+          <input name="vxlan_id" placeholder="VXLAN ID (vd: 101)" value="{{ form_data.vxlan_id or '' }}" /><br />
+
+          <h4>Giảng viên <span class="compulsory-star">*</h4>
+          <input name="teacher_name" placeholder="Tên giảng viên" value="{{ form_data.teacher_name or '' }}" /><br />
+          <input name="teacher_ip" placeholder="IP giảng viên" value="{{ form_data.teacher_ip or '' }}" /><br />
+
+          <h4>Sinh viên <span class="compulsory-star">*</h4>
+          <input name="student_name" placeholder="Tên sinh viên" value="{{ form_data.student_name or '' }}" /><br />
+          <input name="student_ip" placeholder="IP sinh viên" value="{{ form_data.student_ip or '' }}" /><br />
+
+          <button type="submit">Thêm thông tin</button>
+        </form>
+      </div>
+
+      <!-- Tree Section -->
+      <div class="tree-section">
+        <h2>Cấu trúc mạng ảo:</h2>
+        <div class="switch">{{ topology.core.name }}</div>
+        {% for dist in topology.core.children %}
+        <div class="switch">↳ {{ dist.name }} (VXLAN {{ dist.vxlan_id }})</div>
+        {% for user in dist.users %}
+        <div class="user {{ user.role }}">
+          • {{ user.name }} – {{ user.role }} – {{ user.ip }}
+        </div>
+        {% endfor %} {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
