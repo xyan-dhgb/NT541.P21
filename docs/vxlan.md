@@ -11,6 +11,7 @@
 ## Vì sao cần VXLAN?
 
 ### Hạn chế của VLAN truyền thống:
+
 - Mạng Layer 2 mở rộng bị giới hạn về quy mô do số VLAN chỉ có tối đa 4096 ID (12-bit).
 
 - Mạng vật lý khó linh hoạt khi muốn di chuyển VM (virtual machine) giữa các rack, data center, hay cloud khác nhau.
@@ -18,6 +19,7 @@
 - VLAN bị phụ thuộc chặt vào topology vật lý.
 
 ### VXLAN giải quyết:
+
 - Hỗ trợ tới **16 triệu mạng ảo** với VNI (VXLAN Network Identifier) 24-bit.
 
 - **Decouple Layer 2 khỏi Layer 3**: chạy mạng ảo L2 xuyên suốt qua mạng vật lý L3/IP.
@@ -40,6 +42,7 @@ VXLAN sử dụng mô hình **Overlay Network** với 2 thành phần chính:
 
 3. VTEP bên kia **bóc gói**, trả về gói Ethernet gốc cho VM đích.
 
+> [!NOTE]
 >  VXLAN sử dụng **UDP port 4789**.
 
 ## VXLAN "Decouple" khỏi mạng vật lý như thế nào?
@@ -132,3 +135,16 @@ Hãy tưởng tượng chúng ta làm việc trong một tòa nhà văn phòng l
 
 - Giúp tăng tính **mở rộng, linh hoạt, di động** cho hệ thống mạng hiện đại.
 
+## Giải đáp thắc mắc
+
+> **VXLAN chính là giao thức đóng gói mạng ảo được sử dụng ở Layer 2 và chạy trên mạng vật lý IP (Layer 3), vậy có nghĩa là chúng sẽ định tuyến với nhau bằng Switch và không cần Router. Đúng hay sai?**
+
+- Về việc "VXLAN = mạng ảo (Layer 2) chạy trên mạng vật lý IP (Layer 3)"
+
+&rarr; Hoàn toàn chính xác về bản chất kỹ thuật.
+
+- VXLAN cho phép tạo mạng LAN ảo (Layer 2) trên nền hạ tầng mạng Layer 3 (IP) bằng cách **đóng gói (encapsulate)** các frame Ethernet vào trong gói UDP/IP.
+
+- Vậy có cần router không?
+
+    - Có: vẫn cần router (hoặc thiết bị hỗ trợ định tuyến IP) trong underlay để định tuyến giữa các nút VXLAN (gọi là VTEP).
