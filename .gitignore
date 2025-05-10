@@ -10,8 +10,11 @@ __pycache__/
 # C extensions
 *.
 
-# PDF files
+# Local files
 *.pdf
+*.docx
+*.pptx
+*.xls
 
 # Distribution / packaging
 .Python
